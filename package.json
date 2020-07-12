@@ -8,13 +8,13 @@
   },
   "dependencies": {
     "autoprefixer-stylus": "0.14.0",
-    "firebase": "^7.6.0",
-    "prop-types": "^15.6.0",
+    "firebase": "^7.16.0",
+    "prop-types": "^15.7.2",
     "re-base": "4.0.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-router-dom": "^4.2.2",
-    "react-transition-group": "^2.2.1",
+    "react-transition-group": "^2.9.0",
     "serve": "^10.1.2",
     "stylus": "0.54.5"
   },
