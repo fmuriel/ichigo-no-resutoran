@@ -9,7 +9,6 @@ class AddFishForm extends React.Component {
   //is there a way to do all of this at once?
 
   createFish = event => {
-    //Stop the form from submiting
     event.preventDefault();
     const fish = {
       name: this.nameRef.current.value,
@@ -19,7 +18,9 @@ class AddFishForm extends React.Component {
       desc: this.descRef.current.value,
       image: this.imageRef.current.value
     }
-    console.log(fish);
+    this.props.addFish(fish);
+    //refresh the form
+    event.currentTarget.reset();
   }
 
   render() {
