@@ -48,7 +48,7 @@ class App extends React.Component {
               {/*what i've done: when loadSampleFishes is called by clicking the button at inventory, it modifies the state of fishes adding the sampleFishes object. then, since i can't map an object, i get the all the keys of sampleFishes, and then I map: per key, I render a Fish component that'll have the prop details, which has the state of the fish I passed the key upon before, such state being composed by the properties of each object.*/}
             </ul>
           </div>
-          <Order />
+          <Order fishes={this.state.fishes} order={this.state.order} />
           <Inventory
             addFish={this.addFish}
             loadSampleFishes={this.loadSampleFishes}
