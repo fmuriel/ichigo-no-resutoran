@@ -3,17 +3,17 @@ import { formatPrice } from '../helpers';
 
 class Order extends React.Component {
   renderOrder = key => {
-    const fish = this.props.fishes[key];
+    const dish = this.props.dishes[key];
     const count = this.props.order[key];
-    const isAvailable = fish.status === 'available';
+    const isAvailable = dish.status === 'available';
     if (!isAvailable) {
-      return <li key={key}>Sorry {fish ? fish.name : 'fish'} is no longer available</li>
+      return <li key={key}>Sorry {dish ? dish.name : 'this dish'} is no longer available</li>
       //ternary fallback in case the fish gets deleted in the process of adding to cart and adding to inventory
     }
     return (
       <li key={key}>
-        {count}lbs {fish.name}
-        {formatPrice(count * fish.price)}
+        {count}lbs {dish.name}
+        {formatPrice(count * dish.price)}
       </li>
     );
   }
@@ -23,11 +23,11 @@ class Order extends React.Component {
     const orderIds = Object.keys(this.props.order);
 
     const total = orderIds.reduce((prevTotal, key) => {
-      const fish = this.props.fishes[key];
+      const dish = this.props.dishes[key];
       const count = this.props.order[key];
-      const isAvailable = fish && fish.status === 'available';
+      const isAvailable = dish && dish.status === 'available';
       if (isAvailable) {
-        return prevTotal + (count * fish.price);
+        return prevTotal + (count * dish.price);
       }
       return prevTotal;
     }, 0);

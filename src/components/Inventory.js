@@ -1,17 +1,17 @@
 import React from 'react';
-import AddFishForm from './AddFishForm';
+import AddDishForm from './AddDishForm';
 
 class Inventory extends React.Component {
   render() {
     return (
       <div className="inventory">
         <h2>Inventory</h2>
-        <AddFishForm addFish={this.props.addFish} />
-        <button onClick={this.props.loadSampleFishes}>Load Sample Fishes</button>
+        <AddDishForm addDish={this.props.addDish} />
+        <button onClick={this.props.loadSampledishes}>Load Sample dishes</button>
       </div>
     )
   }
-  //addFish doesn't live here, it was passed as prop
+  //addDish doesn't live here, it was passed as prop
 }
 
 export default Inventory;

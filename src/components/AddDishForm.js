@@ -1,6 +1,6 @@
 import React from 'react';
 
-class AddFishForm extends React.Component {
+class AddDishForm extends React.Component {
   nameRef = React.createRef();
   priceRef = React.createRef();
   statusRef = React.createRef();
@@ -8,9 +8,9 @@ class AddFishForm extends React.Component {
   imageRef = React.createRef();
   //is there a way to do all of this at once?
 
-  createFish = event => {
+  createDish = event => {
     event.preventDefault();
-    const fish = {
+    const dish = {
       name: this.nameRef.current.value,
       price: parseFloat(this.priceRef.current.value),
       status: this.statusRef.current.value,
@@ -18,14 +18,14 @@ class AddFishForm extends React.Component {
       desc: this.descRef.current.value,
       image: this.imageRef.current.value
     }
-    this.props.addFish(fish);
+    this.props.addDish(dish);
     //refresh the form
     event.currentTarget.reset();
   }
 
   render() {
     return (
-      <form className="fish-edit" onSubmit={this.createFish}>
+      <form className="fish-edit" onSubmit={this.createDish}>
         <input name="name" ref={this.nameRef} type="text" placeholder="Name" />
         <input name="price" ref={this.priceRef} type="text" placeholder="Price" />
         <select name="status" ref={this.statusRef} type="text" placeholder="Status">
@@ -35,10 +35,10 @@ class AddFishForm extends React.Component {
         <textarea name="desc" ref={this.descRef} type="text" placeholder="Desc">
         </textarea>
         <input name="image" ref={this.imageRef} type="text" placeholder="Image" />
-        <button type="submit">+ Add Fish</button>
+        <button type="submit">+ Add Dish</button>
       </form>
     )
   }
 }
 
-export default AddFishForm;
+export default AddDishForm;

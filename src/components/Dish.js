@@ -1,7 +1,7 @@
 import React from 'react';
 import { formatPrice } from '../helpers';
 
-class Fish extends React.Component {
+class Dish extends React.Component {
   render() {
     const { image, name, price, desc, status } = this.props.details;
     const isAvailable = status === 'available';
@@ -25,4 +25,4 @@ class Fish extends React.Component {
   }
 }
 
-export default Fish;
+export default Dish;
