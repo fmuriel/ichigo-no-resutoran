@@ -358,12 +358,15 @@ header.top h3:after {
   transition: all 0.3s;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   overflow: scroll;
+  border-radius: 25px;
 }
 .catch-of-the-day > *:first-child {
   flex-basis: 50%;
+  margin-right: 10px;
 }
 .catch-of-the-day > *:nth-child(2) {
   min-width: 300px;
+  margin-right: 10px;
 }
 .catch-of-the-day > *:last-child {
   flex-basis: 50%;

@@ -5,7 +5,11 @@ class Order extends React.Component {
   renderOrder = key => {
     const dish = this.props.dishes[key];
     const count = this.props.order[key];
-    const isAvailable = dish.status === 'available';
+    const isAvailable = dish && dish.status === 'available';
+
+    if (!dish) return null;
+    //this was set due to the issue with localstorage and firebase at app.js, i have to make sure the dishes are loaded
+
     if (!isAvailable) {
       return <li key={key}>Sorry {dish ? dish.name : 'this dish'} is no longer available</li>
       //ternary fallback in case the fish gets deleted in the process of adding to cart and adding to inventory
