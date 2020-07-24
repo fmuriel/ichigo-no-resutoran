@@ -12,7 +12,7 @@ class Order extends React.Component {
     }
     return (
       <li key={key}>
-        {count}lbs {dish.name}
+        {count} order {dish.name}
         {formatPrice(count * dish.price)}
       </li>
     );

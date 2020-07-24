@@ -5,7 +5,6 @@ const Header = props => (
     <h1>Ichigo
             <span className="ofThe">
         <span className="of">no</span>
-        <span className="the"></span>
       </span>
       resutoran</h1>
     <h3 className="tagline">
